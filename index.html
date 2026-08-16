@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Live Stock Data | Website Data</title>
+    <meta
+      name="description"
+      content="Read-only live view of the Website Data Google Sheet, refreshed automatically every 2 minutes."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="page-head">
+        <h1>Live Stock Data</h1>
+        <p class="subtitle">
+          Read-only view of the <strong>Website Data</strong> sheet. Data refreshes automatically
+          every 2 minutes.
+        </p>
+      </header>
+
+      <section class="status-bar" aria-live="polite">
+        <span class="live-dot" id="liveBadge"><i></i> Live</span>
+        <span id="lastUpdated">Last updated: —</span>
+        <span id="lastChecked">Last checked: —</span>
+      </section>
+
+      <div id="notice" class="notice" hidden></div>
+
+      <section class="card">
+        <div id="loading" class="state">
+          <span class="spinner" aria-hidden="true"></span> Loading data...
+        </div>
+        <div id="error" class="state state-error" hidden>
+          Unable to load the latest data.<br /><span>Please try again later.</span>
+        </div>
+        <div id="empty" class="state" hidden>No data found in the sheet yet.</div>
+        <div class="table-wrap" id="tableWrap" hidden>
+          <table id="dataTable">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="scroll-hint" id="scrollHint" hidden>&#8592; scroll horizontally to see more &#8594;</p>
+      </section>
+
+      <footer class="page-foot">
+        Data is managed only in Google Sheets. This page is read-only.
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
