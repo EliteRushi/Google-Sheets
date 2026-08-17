@@ -4,7 +4,7 @@
    It looks like: https://script.google.com/macros/s/AKfycb..../exec
    This is the ONLY value you need to change.
    ============================================================ */
-const API_URL = "https://docs.google.com/spreadsheets/d/1yagXN_W4QJ9nnwZs1CLi8FRYPZkt5Pt_UCIAaZh8WBc/edit?gid=1745375155#gid=1745375155";
+const API_URL = "https://docs.google.com/spreadsheets/d/1yagXN_W4QJ9nnwZs1CLi8FRYPZkt5Pt_UCIAaZh8WBc/edit?usp=sharing";
 
 /* Refresh interval: 2 minutes (120000 ms) */
 const REFRESH_MS = 120000;
